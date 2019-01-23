@@ -15,9 +15,8 @@ namespace StudentSystem.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public int AddressId { get; set; }
-        public Course Course { get; set; }
-        public List<Subject> Subjects { get; set; }
+        public virtual Course Course { get; set; }
+        public virtual List<Subject> Subjects { get; set; }
         public virtual Address Addresss { get; set; }
     }
 }
