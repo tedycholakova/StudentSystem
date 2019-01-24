@@ -13,9 +13,13 @@ namespace StudentSystem.Models
         [Required]
         [StringLength(50)]
         public string FirstName { get; set; }
+        [Required]
+        [StringLength(50)]
         public string LastName { get; set; }
+        [DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }
         public virtual Course Course { get; set; }
+
         public virtual List<Subject> Subjects { get; set; }
         public virtual Address Addresss { get; set; }
     }

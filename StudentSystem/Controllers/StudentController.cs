@@ -30,8 +30,8 @@
             return this.View();
         }
 
-        [HttpPost]
-        public IActionResult Create(Student model)
+        [HttpPost("Create")]
+        public IActionResult Create(Student model) 
         {
             if (!ModelState.IsValid)
             {
