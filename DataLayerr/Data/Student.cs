@@ -1,16 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
-namespace StudentSystem.Models
+namespace DataLayer.Data
 {
-    using DataLayer.Models;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public class Student
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "Invalid FirstName value. The name is required and should be less than 50 symbols.")]
+        [StringLength(50)]
         public string FirstName { get; set; }
+
+        [Required(ErrorMessage = "Invalid LastName value. The name is required and should be less than 50 symbols.")]
+        [StringLength(50)]
         public string LastName { get; set; }
+
         [DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }
 
@@ -25,4 +34,3 @@ namespace StudentSystem.Models
         public virtual HashSet<StudentSubjectMark> StudentSubjectMarks { get; set; }
     }
 }
-
