@@ -10,6 +10,7 @@ namespace StudentSystem.Models
     {
         [Key]
         public int Id { get; set; }
+        [Required(ErrorMessage = "Mark have to have a name. ")]
         public string Name { get; set; }
         public virtual HashSet<StudentSubjectMark> StudentSubjectMarks { get; set; }
 

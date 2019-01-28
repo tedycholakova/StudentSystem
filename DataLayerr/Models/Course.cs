@@ -8,7 +8,7 @@ namespace StudentSystem.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "CourseName value is required. ")]
         public string CourseName { get; set; }
         public List<Student> Students { get; set; }
 
