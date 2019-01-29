@@ -4,7 +4,7 @@
 
     using Microsoft.EntityFrameworkCore;
 
-    
+
 
     public class StudentSystemDbContext : DbContext
     {
@@ -23,6 +23,8 @@
         public DbSet<Subject> Subjects { get; set; }
 
         public DbSet<Teacher> Teacher { get; set; }
+
+       public DbSet<StudentSubjectMark> StudentSubjectMarks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
