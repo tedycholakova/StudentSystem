@@ -1,10 +1,10 @@
 ﻿namespace StudentSystem.Data
 {
-    using DataLayer.Data;
+    using DataLayer.Models;
 
     using Microsoft.EntityFrameworkCore;
 
-
+    using StudentSystem.Models;
 
     public class StudentSystemDbContext : DbContext
     {

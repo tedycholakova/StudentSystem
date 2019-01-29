@@ -1,9 +1,12 @@
 ﻿namespace DataLayer.Models
 {
+    using Microsoft.EntityFrameworkCore.Metadata.Internal;
+
     using StudentSystem.Models;
 
     public class StudentSubjectMark
     {
+       
         public int StudentId { get; set; }
 
         public virtual Student Student { get; set; }

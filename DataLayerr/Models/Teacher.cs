@@ -1,19 +1,18 @@
 ﻿namespace StudentSystem.Models
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class Teacher
     {
+        [Key]
         public int Id { get; set; }
-<<<<<<< HEAD
-
-        public string FirstName { get; set; }
-
-=======
-        [Required]
+        
+        [Required(ErrorMessage = "Name cannot be null or more than 50 symbols.")]
         [StringLength(50)]
         public string FirstName { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "Name cannot be null or more than 50 symbols.")]
         [StringLength(50)]
->>>>>>> parent of a75a66e... Added validation attributes to models.
         public string LastName { get; set; }
     }
 }
