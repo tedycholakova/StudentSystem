@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StudentSystem.Data;
 
 namespace DataLayer.Migrations
 {
     [DbContext(typeof(StudentSystemDbContext))]
-    partial class StudentSystemDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190129101234_OverrideConvensionsForModels")]
+    partial class OverrideConvensionsForModels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
